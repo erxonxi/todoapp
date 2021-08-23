@@ -1,14 +1,16 @@
 import { QueryFunction } from 'react-query';
 
+const URL_BACKEND = 'https://todo-api.rubenruizpedreira.es';
+
 export const getTodos = async (): Promise<any> => {
-    const res = await fetch('http://localhost:3000/todos');
+    const res = await fetch(URL_BACKEND + '/todos');
     return res.json();
 };
 
 export const AddToDo = (title: string) => {
     const data = { title, completed: false };
 
-    fetch('http://localhost:3000/todos', {
+    fetch(URL_BACKEND + '/todos', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -25,7 +27,7 @@ export const AddToDo = (title: string) => {
 };
 
 export const completeToDo = (id: number) => {
-    fetch('http://localhost:3000/todos/' + id, {
+    fetch(URL_BACKEND + '/todos/' + id, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -42,7 +44,7 @@ export const completeToDo = (id: number) => {
 };
 
 export const deleteToDo = (id: number) => {
-    fetch('http://localhost:3000/todos/' + id, {
+    fetch(URL_BACKEND + '/todos/' + id, {
         method: 'DELETE',
     })
         .then(async (res) => {
