@@ -1,0 +1,29 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "first todo",
+      "completed": true
+    },
+    {
+      "title": "create backend",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "title": "create frontend",
+      "completed": true,
+      "id": 3
+    },
+    {
+      "title": "asdf",
+      "completed": true,
+      "id": 6
+    },
+    {
+      "title": "darle un besito a la Fran",
+      "completed": true,
+      "id": 8
+    }
+  ]
+}
