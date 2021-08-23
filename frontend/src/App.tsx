@@ -16,10 +16,12 @@ const App = () => {
 
     const submitAddToDo = (id: number) => {
         completeToDo(id);
+        window.location.reload();
     };
 
     const submitDeleteToDo = (id: number) => {
         deleteToDo(id);
+        window.location.reload();
     };
 
     return (

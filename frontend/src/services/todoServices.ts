@@ -1,5 +1,3 @@
-import { QueryFunction } from 'react-query';
-
 const URL_BACKEND = 'https://todo-api.rubenruizpedreira.es';
 
 export const getTodos = async (): Promise<any> => {
